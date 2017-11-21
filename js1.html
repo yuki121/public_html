@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang = "ja">
+<head>
+<meta charset = "UTF-8" />
+<meta name = "robots" content = "noindex, nofollow, noarchive" />
+<link href = "j-1.css" rel = "stylesheet" />
+<title>test</title>
+</head>
+<body>
+ 
+<p id = "myid">こんにちは！</p>
+
+<div style = clear:both;>
+<input type = "button" id = "b1" value = "Click" onclick = "myfunc()" />
+</div>
+
+<div class = "float">
+<input type = "text" id = "t1" name = "t1" maxlength = "10" placeholder = "入力1" value = "" />
+</div>
+
+<div class = "float">
+<input type = "button" id = "b2" value = "Click1" onclick = "myfunc2()" />
+</div>
+
+<div class = "float">
+<input type = "text" id = "t2" name = "t2" maxlength = "10" placeholder = "入力2" value = "" />
+</div>
+
+<div class = "float">
+<input type = "button" id = "b3" value = "Click2" onclick = "myfunc3()" />
+</div>
+
+<div class = "float">
+<input type = "text" id = "t3" name = "t3" maxlength = "10" placeholder = "入力3" value = "" />
+</div>
+
+<div style = clear:both;>
+<input type = "text" id = "t4" name = "t4" maxlength = "10" placeholder = "入力4" value = "" />
+</div>
+
+<script>
+var myfunc = function(){
+	var myp = document.getElementById("myid");
+	myp.innerHTML = "こんばんは！";
+}
+
+var myfunc2 = function(){
+	document.getElementById("t2").value=document.getElementById("t1").value;
+}
+
+var myfunc3 = function(){
+	document.getElementById("t3").value=document.getElementById("t2").value;
+	var myp3 = document.getElementById("t3");
+	myp3.style = "color:red;font-size:48px;";
+}
+</script>
+
+</body>
+</html>
